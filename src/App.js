@@ -94,10 +94,20 @@ function CarCard({ car }) {
         </div>
       </div>
 
-      {/* Car illustration */}
-      <div style={{padding:"10px 14px", height:110, background:"#0A0A0A", position:"relative", zIndex:1}}>
-        <CarSVG team={car.team} year={car.year}/>
-      </div>
+      {/* Car photo or SVG fallback */}
+<div style={{position:"relative",overflow:"hidden",background:"#0A0A0A",zIndex:1}}>
+  {car.image ? (<>
+    <img src={car.image} alt={`${car.car} ${car.year}`}
+      onError={e=>{e.target.style.display="none";e.target.nextSibling.style.display="block";}}
+      style={{width:"100%",height:140,objectFit:"cover",objectPosition:"center",display:"block",filter:"sepia(10%) contrast(1.1) brightness(0.9)"}}/>
+    <div style={{display:"none",padding:"10px 14px",height:140}}><CarSVG team={car.team} year={car.year}/></div>
+  </>) : (
+    <div style={{padding:"10px 14px",height:140}}><CarSVG team={car.team} year={car.year}/></div>
+  )}
+  <div style={{position:"absolute",bottom:0,left:0,right:0,background:"linear-gradient(transparent,rgba(0,0,0,0.7))",padding:"20px 12px 8px",fontFamily:"'Bebas Neue',sans-serif",fontSize:11,color:"#FFD700",letterSpacing:"0.15em"}}>
+    {car.team.toUpperCase()} · {car.year}
+  </div>
+</div>
 
       {/* Stats */}
       <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:6, padding:"10px 14px", borderBottom:`1px solid rgba(255,255,255,0.06)`, position:"relative", zIndex:1}}>
