@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import DESCRIPTIONS from "./descriptions";
 
 const SENNA_CARS = [
-  { year: 1984, car: "Toleman TG184", team: "Toleman", engine: "Hart 415T L4 Turbo 1.5", race_wins: 0, poles: 0, podiums: 2 },
-  { year: 1985, car: "Lotus 97T", team: "Lotus", engine: "Renault EF4 V6 Turbo 1.5", race_wins: 2, poles: 7, podiums: 7 },
-  { year: 1986, car: "Lotus 98T", team: "Lotus", engine: "Renault EF15 V6 Turbo 1.5", race_wins: 2, poles: 8, podiums: 8 },
-  { year: 1987, car: "Lotus 99T", team: "Lotus", engine: "Honda RA167E V6 Turbo 1.5", race_wins: 2, poles: 2, podiums: 7 },
-  { year: 1992, car: "McLaren MP4/7A", team: "McLaren", engine: "Honda RA122E V12 3.5", race_wins: 3, poles: 1, podiums: 11 },
-  { year: 1993, car: "McLaren MP4/8", team: "McLaren", engine: "Ford HB V8 3.5", race_wins: 5, poles: 1, podiums: 15 },
-  { year: 1994, car: "Williams FW16", team: "Williams", engine: "Renault RS6 V10 3.5", race_wins: 0, poles: 3, podiums: 0 },
+  { year: 1984, car: "Toleman TG184", team: "Toleman", engine: "Hart 415T L4 Turbo 1.5", race_wins: 0, poles: 0, podiums: 2, image :"https://www.goodwood.com/globalassets/.road--racing/race/historic/2024/04-april/tfif-senna-monaco/ayrton_senna_monaco_1984_goodwood_12042024_list.jpg" },
+  { year: 1985, car: "Lotus 97T", team: "Lotus", engine: "Renault EF4 V6 Turbo 1.5", race_wins: 2, poles: 7, podiums: 7, image :"https://imagenes.topgear.es/files/image_1920_1080/uploads/imagenes/2025/04/10/68c99bd621c17.jpeg" },
+  { year: 1986, car: "Lotus 98T", team: "Lotus", engine: "Renault EF15 V6 Turbo 1.5", race_wins: 2, poles: 8, podiums: 8, image :"https://motorspot.es/wp-content/uploads/2014/03/1986_lotus_98t.jpg" },
+  { year: 1987, car: "Lotus 99T", team: "Lotus", engine: "Honda RA167E V6 Turbo 1.5", race_wins: 2, poles: 2, podiums: 7, image :"https://live.staticflickr.com/2466/4014054060_c8f942ca1c_o.jpg" },
+  { year: 1992, car: "McLaren MP4/7A", team: "McLaren", engine: "Honda RA122E V12 3.5", race_wins: 3, poles: 1, podiums: 11, image :"https://www.f1technical.net/f1db/cars/images/1992/mclaren-mp4-7a-big.jpg" },
+  { year: 1993, car: "McLaren MP4/8", team: "McLaren", engine: "Ford HB V8 3.5", race_wins: 5, poles: 1, podiums: 15, image :"https://www.autohebdo.fr/app/uploads/2024/05/DPPI_09011031_015.jpg" },
+  { year: 1994, car: "Williams FW16", team: "Williams", engine: "Renault RS6 V10 3.5", race_wins: 0, poles: 3, podiums: 0, image :"https://www.snaplap.net/wp-content/uploads/2017/04/williams_fw16.jpg" },
 ];
 
 const TEAM_COLORS = {
